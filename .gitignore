@@ -15,3 +15,15 @@ temp/
 # Local files
 notes_local.txt
 config/appsettings.Development.json
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+*.suo
+
+# Test results
+TestResults/
