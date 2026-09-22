@@ -1,0 +1,16 @@
+# Build results
+bin/
+obj/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Local files
+notes_local.txt
+temp/
+
+# Local configuration
+config/appsettings.Development.json
