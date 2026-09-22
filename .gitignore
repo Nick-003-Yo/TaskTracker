@@ -1,1 +1,17 @@
+*.user
+.vs/
+
+# Build results
+bin/
+obj/
+
+# Logs
+*.log
+
+# Temporary files
 *.tmp
+temp/
+
+# Local files
+notes_local.txt
+config/appsettings.Development.json
