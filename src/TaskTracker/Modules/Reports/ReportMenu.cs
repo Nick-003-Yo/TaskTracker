@@ -1,4 +1,4 @@
-using TaskTracker.Services;
+﻿using TaskTracker.Services;
 
 namespace TaskTracker.Modules.Reports;
 
@@ -25,23 +25,36 @@ public class ReportMenu
 
         var command = Console.ReadLine();
 
-        if (command == "1")
+        switch (command)
         {
-            Console.WriteLine(_reportService.BuildSummary());
+            case "1":
+                Console.WriteLine(_reportService.BuildSummary());
+                break;
+            case "2":
+                PrintOverdue();
+                break;
+            case "3":
+                _exporter.Export(_taskService.GetAll());
+                break;
+            default:
+                Console.WriteLine("Неизвестная команда.");
+                break;
+        }
+    }
+
+    private void PrintOverdue()
+    {
+        var tasks = _reportService.GetOverdueTasks();
+
+        if (tasks.Count == 0)
+        {
+            Console.WriteLine("Просроченных задач нет.");
+            return;
         }
 
-        if (command == "2")
+        foreach (var task in tasks)
         {
-            var tasks = _reportService.GetOverdueTasks();
-            foreach (var task in tasks)
-            {
-                Console.WriteLine(task.Id + " " + task.Title + " " + task.DueDate);
-            }
-        }
-
-        if (command == "3")
-        {
-            _exporter.Export(_taskService.GetAll());
+            Console.WriteLine($"{task.Id} {task.Title} (срок {task.DueDate:dd.MM.yyyy})");
         }
     }
 }
