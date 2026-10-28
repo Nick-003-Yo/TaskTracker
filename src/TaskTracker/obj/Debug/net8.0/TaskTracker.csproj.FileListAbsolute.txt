@@ -1,0 +1,15 @@
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\bin\Debug\net8.0\TaskTracker.exe
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\bin\Debug\net8.0\TaskTracker.deps.json
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\bin\Debug\net8.0\TaskTracker.runtimeconfig.json
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\bin\Debug\net8.0\TaskTracker.dll
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\bin\Debug\net8.0\TaskTracker.pdb
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.AssemblyInfoInputs.cache
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.AssemblyInfo.cs
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.csproj.CoreCompileInputs.cache
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.sourcelink.json
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.dll
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\refint\TaskTracker.dll
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.pdb
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\TaskTracker.genruntimeconfig.cache
+C:\Users\seraf\source\repos\TaskTracker\src\TaskTracker\obj\Debug\net8.0\ref\TaskTracker.dll
