@@ -3,3 +3,7 @@
 # данные и отчёты TaskTracker
 data/tasks.json
 reports/
+
+bin/
+obj/
+src/TaskTracker/data/tasks.json
