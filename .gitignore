@@ -1,1 +1,5 @@
-*.tmp
+﻿*.tmp
+
+# данные и отчёты TaskTracker
+data/tasks.json
+reports/

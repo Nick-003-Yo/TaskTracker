@@ -15,7 +15,7 @@ while (true)
 {
     Console.Clear();
     Console.WriteLine("==============================");
-    Console.WriteLine("        TASKTRACKER 2.0");
+    Console.WriteLine("        TASKTRACKER 2.1.1");
     Console.WriteLine("==============================");
     Console.WriteLine("1. Показать задачи");
     Console.WriteLine("2. Создать задачу");

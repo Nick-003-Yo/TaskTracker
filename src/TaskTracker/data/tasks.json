@@ -1,22 +1,52 @@
 [
   {
     "Id": 1,
-    "Title": "Настроить сервер",
-    "Description": "Настройка сервера",
-    "Assignee": "Иванов",
-    "Priority": 1,
+    "Title": "Настроить рабочее место",
+    "Description": "",
+    "Assignee": "",
+    "Priority": 2,
     "Status": 0,
     "DueDate": null,
-    "CreatedAt": "2026-10-28T10:12:50.436959+03:00"
+    "CreatedAt": "2026-10-28T12:59:23.7850052+03:00"
   },
   {
     "Id": 2,
-    "Title": "Проверить копии",
-    "Description": "Проверка копий",
-    "Assignee": "Смирнов",
+    "Title": "Обновить документацию",
+    "Description": "",
+    "Assignee": "",
+    "Priority": 1,
+    "Status": 1,
+    "DueDate": null,
+    "CreatedAt": "2026-10-28T12:59:37.2309714+03:00"
+  },
+  {
+    "Id": 3,
+    "Title": "Проверить резервную копию",
+    "Description": "",
+    "Assignee": "",
+    "Priority": 0,
+    "Status": 2,
+    "DueDate": null,
+    "CreatedAt": "2026-10-28T12:59:47.3338965+03:00"
+  },
+  {
+    "Id": 4,
+    "Title": "Сдать отчёт",
+    "Description": "",
+    "Assignee": "",
+    "Priority": 1,
+    "Status": 0,
+    "DueDate": "2026-10-01T00:00:00",
+    "CreatedAt": "2026-10-28T13:00:16.8346815+03:00"
+  },
+  {
+    "Id": 5,
+    "Title": "Проверить сервер, БД и API",
+    "Description": "",
+    "Assignee": "",
     "Priority": 1,
     "Status": 0,
     "DueDate": null,
-    "CreatedAt": "2026-10-28T10:13:14.0123846+03:00"
+    "CreatedAt": "2026-10-28T13:00:31.1410945+03:00"
   }
 ]
