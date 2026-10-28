@@ -17,10 +17,16 @@ public class TaskReportService
     {
         var tasks = _taskService.GetAll().ToList();
 
-        var completed = tasks.Count(t => t.Status.ToString() == "Done");
-        var completionPercent = completed * 100 / tasks.Count;
+        var total = tasks.Count;
+        var newTasks = tasks.Count(t => t.Status == TaskState.New);
+        var inProgress = tasks.Count(t => t.Status == TaskState.InProgress);
+        var completed = tasks.Count(t => t.Status == TaskState.Completed);
+        var completionPercent = total == 0
+            ? 0
+            : (int)Math.Round(completed * 100.0 / total);
         var overdue = tasks.Count(IsOverdue);
-        var highPriority = tasks.Count(t => (int)t.Priority == 3);
+        var highPriority = tasks.Count(t => t.Priority == TaskPriority.High);
+        var withoutAssignee = tasks.Count(t => string.IsNullOrWhiteSpace(t.Assignee));
 
         var mostLoadedAssignee = tasks
             .Where(t => !string.IsNullOrWhiteSpace(t.Assignee))
@@ -30,11 +36,14 @@ public class TaskReportService
 
         var builder = new StringBuilder();
         builder.AppendLine("=== Отчёт по задачам ===");
-        builder.AppendLine("Всего задач: " + tasks.Count);
+        builder.AppendLine("Всего задач: " + total);
+        builder.AppendLine("Новых: " + newTasks);
+        builder.AppendLine("В работе: " + inProgress);
         builder.AppendLine("Выполнено: " + completed);
         builder.AppendLine("Процент выполнения: " + completionPercent + "%");
         builder.AppendLine("Просрочено: " + overdue);
         builder.AppendLine("Высокий приоритет: " + highPriority);
+        builder.AppendLine("Без исполнителя: " + withoutAssignee);
         builder.AppendLine("Самый загруженный исполнитель: " + mostLoadedAssignee);
         return builder.ToString();
     }
