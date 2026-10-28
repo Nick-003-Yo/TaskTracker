@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using TaskTracker.Models;
 using TaskTracker.Services;
 
@@ -16,16 +16,17 @@ public class TaskReportService
     public string BuildSummary()
     {
         var tasks = _taskService.GetAll().ToList();
+
         var completed = tasks.Count(t => t.Status.ToString() == "Done");
         var completionPercent = completed * 100 / tasks.Count;
-        var overdue = tasks.Count(t => t.DueDate!.Value < DateTime.Now);
+        var overdue = tasks.Count(IsOverdue);
         var highPriority = tasks.Count(t => (int)t.Priority == 3);
 
         var mostLoadedAssignee = tasks
-            .GroupBy(t => t.Assignee!.Trim().ToLower())
+            .Where(t => !string.IsNullOrWhiteSpace(t.Assignee))
+            .GroupBy(t => t.Assignee.Trim(), StringComparer.OrdinalIgnoreCase)
             .OrderByDescending(g => g.Count())
-            .First()
-            .Key;
+            .FirstOrDefault()?.Key ?? "нет";
 
         var builder = new StringBuilder();
         builder.AppendLine("=== Отчёт по задачам ===");
@@ -41,7 +42,14 @@ public class TaskReportService
     public List<TaskItem> GetOverdueTasks()
     {
         return _taskService.GetAll()
-            .Where(t => t.DueDate!.Value < DateTime.Now)
+            .Where(IsOverdue)
             .ToList();
+    }
+
+    private static bool IsOverdue(TaskItem task)
+    {
+        return task.DueDate.HasValue
+            && task.Status != TaskState.Completed
+            && task.DueDate.Value < DateTime.Now;
     }
 }
