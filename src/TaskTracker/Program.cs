@@ -2,6 +2,7 @@
 using System.Text;
 using TaskTracker.Models;
 using TaskTracker.Services;
+using TaskTracker.Modules.Reports;
 
 Console.OutputEncoding = Encoding.UTF8;
 Console.InputEncoding = Encoding.UTF8;
@@ -23,6 +24,7 @@ while (true)
     Console.WriteLine("5. Поиск");
     Console.WriteLine("6. Фильтр по статусу");
     Console.WriteLine("7. Фильтр по приоритету");
+    Console.WriteLine("8. Отчёты и экспорт");
     Console.WriteLine("0. Выход");
     Console.Write("\nВыберите действие: ");
 
@@ -53,6 +55,10 @@ while (true)
             break;
         case "7":
             FilterByPriority(taskService);
+            break;
+        case "8":
+            new ReportMenu(taskService).Run();
+            Pause();
             break;
         case "0":
             storage.Save(taskService.GetAll());
