@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Title": "Настроить сервер",
+    "Description": "Настройка сервера",
+    "Assignee": "Иванов",
+    "Priority": 1,
+    "Status": 0,
+    "DueDate": null,
+    "CreatedAt": "2026-10-28T10:12:50.436959+03:00"
+  },
+  {
+    "Id": 2,
+    "Title": "Проверить копии",
+    "Description": "Проверка копий",
+    "Assignee": "Смирнов",
+    "Priority": 1,
+    "Status": 0,
+    "DueDate": null,
+    "CreatedAt": "2026-10-28T10:13:14.0123846+03:00"
+  }
+]
